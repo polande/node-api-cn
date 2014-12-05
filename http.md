@@ -47,7 +47,7 @@ list like the following:
 
 * {Array}
 
-A list of the HTTP methods that are supported by the parser.
+解析器支持的 HTTP 方法列表。
 
 ## http.STATUS_CODES
 
