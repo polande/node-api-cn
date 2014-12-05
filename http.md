@@ -2,15 +2,15 @@
 
     Stability: 3 - Stable
 
-To use the HTTP server and client one must `require('http')`.
+要使用 HTTP 服务器或客户端功能，通过 `require('http')` 调用。
 
-The HTTP interfaces in Node are designed to support many features
-of the protocol which have been traditionally difficult to use.
-In particular, large, possibly chunk-encoded, messages. The interface is
-careful to never buffer entire requests or responses--the
-user is able to stream data.
+Node 的 HTTP 接口被设计成支持多种 HTTP 协议的特性，
+这些特性原本难以使用。
+特别是对于数据量很大或者大块编码的信息。
+这些接口很精细，不会缓存整个请求或响应，
+因此可以在请求或响应中使用数据流。
 
-HTTP message headers are represented by an object like this:
+HTTP 的消息头由对象表示，比如：
 
     { 'content-length': '123',
       'content-type': 'text/plain',
@@ -18,12 +18,12 @@ HTTP message headers are represented by an object like this:
       'host': 'mysite.com',
       'accept': '*/*' }
 
-Keys are lowercased. Values are not modified.
+其中键是小写的，值是不能修改的。
 
-In order to support the full spectrum of possible HTTP applications, Node's
-HTTP API is very low-level. It deals with stream handling and message
-parsing only. It parses a message into headers and body but it does not
-parse the actual headers or the body.
+为了能全面地支持可能的 HTTP 应用程序，
+Node 的 HTTP API 都很底层。
+它只涉及流处理和消息解析。
+它只把消息解析成消息头和消息体，但不解析实际的消息头和消息体。
 
 Defined headers that allow multiple values are concatenated with a `,`
 character, except for the `set-cookie` and `cookie` headers which are
