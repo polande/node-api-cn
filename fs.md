@@ -459,25 +459,25 @@ Synchronous version of `fs.read`. Returns the number of `bytesRead`.
   * `flag` {String} default = `'r'`
 * `callback` {Function}
 
-Asynchronously reads the entire contents of a file. Example:
+同步的读取文件的全部内容。例子：
 
     fs.readFile('/etc/passwd', function (err, data) {
       if (err) throw err;
       console.log(data);
     });
 
-The callback is passed two arguments `(err, data)`, where `data` is the
-contents of the file.
+回调函数有两个参数 `(err, data)`，
+其中 `data` 是文件的内容。
 
-If no encoding is specified, then the raw buffer is returned.
+如果没有指定编码方式，则返回原始的 buffer。
 
 
 ## fs.readFileSync(filename, [options])
 
-Synchronous version of `fs.readFile`. Returns the contents of the `filename`.
+同步的读取文件。返回 `filename` 的内容。
 
-If the `encoding` option is specified then this function returns a
-string. Otherwise it returns a buffer.
+如果指定了 `encoding`，则返回一个字符串，
+否则返回一个 buffer。
 
 
 ## fs.writeFile(filename, data, [options], callback)
