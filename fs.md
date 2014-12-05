@@ -210,16 +210,16 @@ Synchronous fstat(2). Returns an instance of `fs.Stats`.
 
 ## fs.symlink(srcpath, dstpath, [type], callback)
 
-Asynchronous symlink(2). No arguments other than a possible exception are given
-to the completion callback.
-The `type` argument can be set to `'dir'`, `'file'`, or `'junction'` (default
-is `'file'`) and is only available on Windows (ignored on other platforms).
-Note that Windows junction points require the destination path to be absolute.  When using
-`'junction'`, the `destination` argument will automatically be normalized to absolute path.
+异步的创建快捷方式。
+回调函数只有一个参数：可能出现的异常信息。
+`type` 可以是 `'dir'`、`'file'`、或 `'junction'`（默认是 `'file'`），
+且仅适用于 Windows 系统（其他系统平台会被忽略）。
+注意：Windows 系统要求目标路径必须是一个绝对路径，
+当使用 `'junction'` 时，`dstpath` 会被自动格式化为绝对路径。
 
 ## fs.symlinkSync(srcpath, dstpath, [type])
 
-Synchronous symlink(2).
+同步的创建快捷方式。
 
 ## fs.readlink(path, callback)
 
