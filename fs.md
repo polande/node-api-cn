@@ -87,12 +87,12 @@ site, set the NODE_DEBUG environment variable:
 
 ## fs.rename(oldPath, newPath, callback)
 
-Asynchronous rename(2). No arguments other than a possible exception are given
-to the completion callback.
+异步的重命名函数。
+回调函数只有一个参数：可能出现的异常信息。
 
 ## fs.renameSync(oldPath, newPath)
 
-Synchronous rename(2).
+同步的重命名函数。
 
 ## fs.ftruncate(fd, len, callback)
 
