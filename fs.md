@@ -490,7 +490,7 @@ Synchronous version of `fs.read`. Returns the number of `bytesRead`.
   * `flag` {String} default = `'w'`
 * `callback` {Function}
 
-异步的将数据写入一个文件，如果文件存在，则会被替换。
+异步的将数据写入一个文件。如果文件存在，则会被替换。
 `data` 可以是字符串或 buffer。
 
 如果 `data` 是一个 buffer，则 `encoding` 会被忽视。
@@ -517,10 +517,10 @@ Synchronous version of `fs.read`. Returns the number of `bytesRead`.
   * `flag` {String} default = `'a'`
 * `callback` {Function}
 
-Asynchronously append data to a file, creating the file if it not yet exists.
-`data` can be a string or a buffer.
+异步的添加数据到文件末尾。如果文件不存在，则创建一个新的文件。
+`data` 可以是字符串或 buffer。
 
-Example:
+例子：
 
     fs.appendFile('message.txt', 'data to append', function (err) {
       if (err) throw err;
@@ -529,7 +529,7 @@ Example:
 
 ## fs.appendFileSync(filename, data, [options])
 
-The synchronous version of `fs.appendFile`.
+同步的添加数据到文件末尾。
 
 ## fs.watchFile(filename, [options], listener)
 
