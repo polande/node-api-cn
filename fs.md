@@ -459,7 +459,7 @@ Synchronous version of `fs.read`. Returns the number of `bytesRead`.
   * `flag` {String} default = `'r'`
 * `callback` {Function}
 
-同步的读取文件的全部内容。例子：
+异步的读取文件的全部内容。例子：
 
     fs.readFile('/etc/passwd', function (err, data) {
       if (err) throw err;
@@ -490,13 +490,13 @@ Synchronous version of `fs.read`. Returns the number of `bytesRead`.
   * `flag` {String} default = `'w'`
 * `callback` {Function}
 
-Asynchronously writes data to a file, replacing the file if it already exists.
-`data` can be a string or a buffer.
+异步的将数据写入一个文件，如果文件存在，则会被替换。
+`data` 可以是字符串或 buffer。
 
-The `encoding` option is ignored if `data` is a buffer. It defaults
-to `'utf8'`.
+如果 `data` 是一个 buffer，则 `encoding` 会被忽视。
+`encoding` 默认是 `'utf8'`。
 
-Example:
+例子：
 
     fs.writeFile('message.txt', 'Hello Node', function (err) {
       if (err) throw err;
@@ -505,7 +505,7 @@ Example:
 
 ## fs.writeFileSync(filename, data, [options])
 
-The synchronous version of `fs.writeFile`.
+同步的写入文件。
 
 ## fs.appendFile(filename, data, [options], callback)
 
