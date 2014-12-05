@@ -87,12 +87,12 @@ site, set the NODE_DEBUG environment variable:
 
 ## fs.rename(oldPath, newPath, callback)
 
-异步的重命名函数。
+异步的重命名。
 回调函数只有一个参数：可能出现的异常信息。
 
 ## fs.renameSync(oldPath, newPath)
 
-同步的重命名函数。
+同步的重命名。
 
 ## fs.ftruncate(fd, len, callback)
 
@@ -170,7 +170,7 @@ Synchronous lchmod(2).
 
 ## fs.stat(path, callback)
 
-异步的文件属性函数。
+异步的获取文件信息。
 回调函数有两个参数 `(err, stats)`，
 其中 `stats` 是一个 [fs.Stats](#fs_class_fs_stats) 对象。
 
@@ -189,7 +189,7 @@ the file to be stat-ed is specified by the file descriptor `fd`.
 
 ## fs.statSync(path)
 
-同步的文件属性函数。返回一个 `fs.Stats` 实例。
+同步的获取文件信息。返回一个 `fs.Stats` 实例。
 
 ## fs.lstatSync(path)
 
@@ -201,12 +201,12 @@ Synchronous fstat(2). Returns an instance of `fs.Stats`.
 
 ## fs.link(srcpath, dstpath, callback)
 
-Asynchronous link(2). No arguments other than a possible exception are given to
-the completion callback.
+异步的拷贝文件。
+回调函数只有一个参数：可能出现的异常信息。
 
 ## fs.linkSync(srcpath, dstpath)
 
-Synchronous link(2).
+同步的拷贝文件。
 
 ## fs.symlink(srcpath, dstpath, [type], callback)
 
