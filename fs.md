@@ -269,12 +269,12 @@ Synchronous realpath(2). Returns the resolved path.
 
 ## fs.mkdir(path, [mode], callback)
 
-Asynchronous mkdir(2). No arguments other than a possible exception are given
-to the completion callback. `mode` defaults to `0777`.
+异步的创建目录。
+回调函数只有一个参数：可能出现的异常信息。`mode` 默认为 `0777`。
 
 ## fs.mkdirSync(path, [mode])
 
-Synchronous mkdir(2).
+同步的创建目录。
 
 ## fs.readdir(path, callback)
 
