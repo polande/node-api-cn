@@ -11,7 +11,7 @@ access it with `require('assert')`.
 
 ## assert(value, message), assert.ok(value, [message])
 
-Tests if value is truthy, it is equivalent to `assert.equal(true, !!value, message);`
+测试值是否为真，相当于 `assert.equal(true, !!value, message)`。
 
 ## assert.equal(actual, expected, [message])
 
