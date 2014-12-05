@@ -7,7 +7,7 @@ access it with `require('assert')`.
 
 ## assert.fail(actual, expected, message, operator)
 
-Throws an exception that displays the values for `actual` and `expected` separated by the provided operator.
+抛出异常，控制台输出 `actual` 和 `expected` 的值，以 `operator` 分隔。
 
 ## assert(value, message), assert.ok(value, [message])
 
