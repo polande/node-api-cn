@@ -87,12 +87,12 @@ site, set the NODE_DEBUG environment variable:
 
 ## fs.rename(oldPath, newPath, callback)
 
-异步的重命名。
+异步的重命名文件。
 回调函数只有一个参数：可能出现的异常信息。
 
 ## fs.renameSync(oldPath, newPath)
 
-同步的重命名。
+同步的重命名文件。
 
 ## fs.ftruncate(fd, len, callback)
 
@@ -105,12 +105,12 @@ Synchronous ftruncate(2).
 
 ## fs.truncate(path, len, callback)
 
-Asynchronous truncate(2). No arguments other than a possible exception are
-given to the completion callback.
+异步的截断文件。
+回调函数只有一个参数：可能出现的异常信息。
 
 ## fs.truncateSync(path, len)
 
-Synchronous truncate(2).
+同步的截断文件。
 
 ## fs.chown(path, uid, gid, callback)
 
