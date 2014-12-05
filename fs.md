@@ -170,9 +170,9 @@ Synchronous lchmod(2).
 
 ## fs.stat(path, callback)
 
-Asynchronous stat(2). The callback gets two arguments `(err, stats)` where
-`stats` is a [fs.Stats](#fs_class_fs_stats) object.  See the [fs.Stats](#fs_class_fs_stats)
-section below for more information.
+异步的文件属性函数。
+回调函数有两个参数 `(err, stats)`，
+其中 `stats` 是一个 [fs.Stats](#fs_class_fs_stats) 对象。
 
 ## fs.lstat(path, callback)
 
@@ -189,7 +189,7 @@ the file to be stat-ed is specified by the file descriptor `fd`.
 
 ## fs.statSync(path)
 
-Synchronous stat(2). Returns an instance of `fs.Stats`.
+同步的文件属性函数。返回一个 `fs.Stats` 实例。
 
 ## fs.lstatSync(path)
 
