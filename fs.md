@@ -141,12 +141,12 @@ Synchronous lchown(2).
 
 ## fs.chmod(path, mode, callback)
 
-Asynchronous chmod(2). No arguments other than a possible exception are given
-to the completion callback.
+异步的修改文件权限。
+回调函数只有一个参数：可能出现的异常信息。
 
 ## fs.chmodSync(path, mode)
 
-Synchronous chmod(2).
+同步的修改文件权限。
 
 ## fs.fchmod(fd, mode, callback)
 
