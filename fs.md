@@ -4,19 +4,19 @@
 
 <!--name=fs-->
 
-File I/O is provided by simple wrappers around standard POSIX functions.  To
-use this module do `require('fs')`. All the methods have asynchronous and
-synchronous forms.
+该模块是一个简单包装的标准 POSIX 文件操作函数集。
+通过 `require('fs')` 调用。
+模块所有的方法均有异步和同步的形式。
 
-The asynchronous form always take a completion callback as its last argument.
-The arguments passed to the completion callback depend on the method, but the
-first argument is always reserved for an exception. If the operation was
-completed successfully, then the first argument will be `null` or `undefined`.
+异步形式的方法需要一个完成时的回调函数作为最后一个参数。
+虽然回调函数的参数由调用的方法所决定，
+但通常第一个参数用于返回错误信息。
+如果操作执行成功，则第一个参数为 `null` 或 `undefined`。
 
-When using the synchronous form any exceptions are immediately thrown.
-You can use try/catch to handle exceptions or allow them to bubble up.
+当使用同步形式的方法时，任何异常都会被立即抛出。
+可以使用 try/catch 来处理异常或抛给上一层。
 
-Here is an example of the asynchronous version:
+异步形式的例子：
 
     var fs = require('fs');
 
@@ -25,15 +25,15 @@ Here is an example of the asynchronous version:
       console.log('successfully deleted /tmp/hello');
     });
 
-Here is the synchronous version:
+同步形式的例子：
 
     var fs = require('fs');
 
     fs.unlinkSync('/tmp/hello')
     console.log('successfully deleted /tmp/hello');
 
-With the asynchronous methods there is no guaranteed ordering. So the
-following is prone to error:
+异步方法不保证执行顺序。
+所以下面的例子很容易出错：
 
     fs.rename('/tmp/hello', '/tmp/world', function (err) {
       if (err) throw err;
@@ -44,8 +44,8 @@ following is prone to error:
       console.log('stats: ' + JSON.stringify(stats));
     });
 
-It could be that `fs.stat` is executed before `fs.rename`.
-The correct way to do this is to chain the callbacks.
+`fs.stat` 有可能在 `fs.rename` 之前执行。
+正确的用法是把回调链起来。
 
     fs.rename('/tmp/hello', '/tmp/world', function (err) {
       if (err) throw err;
@@ -55,12 +55,12 @@ The correct way to do this is to chain the callbacks.
       });
     });
 
-In busy processes, the programmer is _strongly encouraged_ to use the
-asynchronous versions of these calls. The synchronous versions will block
-the entire process until they complete--halting all connections.
+在繁重的任务中，强烈建议使用异步的方法。
+同步的方法会阻塞整个进程直到完成处理，
+也就是说会挂起所有的连接。
 
-Relative path to filename can be used, remember however that this path will be
-relative to `process.cwd()`.
+可以使用文件名的相对路径,
+但是这个路径是相对于 `process.cwd()` 的。
 
 Most fs functions let you omit the callback argument. If you do, a default
 callback is used that rethrows errors. To get a trace to the original call
