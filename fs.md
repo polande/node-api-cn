@@ -251,12 +251,12 @@ Synchronous realpath(2). Returns the resolved path.
 
 ## fs.unlink(path, callback)
 
-Asynchronous unlink(2). No arguments other than a possible exception are given
-to the completion callback.
+异步的删除文件。
+回调函数只有一个参数：可能出现的异常信息。
 
 ## fs.unlinkSync(path)
 
-Synchronous unlink(2).
+同步的删除文件。
 
 ## fs.rmdir(path, callback)
 
