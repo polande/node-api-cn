@@ -2,8 +2,8 @@
 
     Stability: 5 - Locked
 
-This module is used for writing unit tests for your applications, you can
-access it with `require('assert')`.
+此模块用于为程序编写单元测试，
+通过 `require('assert')` 调用。
 
 ## assert.fail(actual, expected, message, operator)
 
