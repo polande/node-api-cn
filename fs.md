@@ -278,14 +278,14 @@ Synchronous realpath(2). Returns the resolved path.
 
 ## fs.readdir(path, callback)
 
-Asynchronous readdir(3).  Reads the contents of a directory.
-The callback gets two arguments `(err, files)` where `files` is an array of
-the names of the files in the directory excluding `'.'` and `'..'`.
+异步的读取目录内容。
+回调函数有两个参数 `(err, files)`，
+其中 `files` 是目录所含文件的文件名数组，排除 `'.'` 和 `'..'`。
 
 ## fs.readdirSync(path)
 
-Synchronous readdir(3). Returns an array of filenames excluding `'.'` and
-`'..'`.
+同步的读取目录内容。
+返回文件名数组，排除 `'.'` 和 `'..'`。
 
 ## fs.close(fd, callback)
 
