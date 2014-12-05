@@ -15,11 +15,11 @@
 
 ## assert.equal(actual, expected, [message])
 
-Tests shallow, coercive equality with the equal comparison operator ( `==` ).
+测试是否相等, 相当于相等操作符 ( `==` )。
 
 ## assert.notEqual(actual, expected, [message])
 
-Tests shallow, coercive non-equality with the not equal comparison operator ( `!=` ).
+测试是否不相等, 相当于不等操作符 ( `!=` )。
 
 ## assert.deepEqual(actual, expected, [message])
 
