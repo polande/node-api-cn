@@ -260,12 +260,12 @@ Synchronous realpath(2). Returns the resolved path.
 
 ## fs.rmdir(path, callback)
 
-Asynchronous rmdir(2). No arguments other than a possible exception are given
-to the completion callback.
+异步的删除目录。
+回调函数只有一个参数：可能出现的异常信息。
 
 ## fs.rmdirSync(path)
 
-Synchronous rmdir(2).
+同步的删除目录。
 
 ## fs.mkdir(path, [mode], callback)
 
