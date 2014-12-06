@@ -72,7 +72,7 @@ list like the following:
 
 ## Class: http.Server
 
-This is an [EventEmitter][] with the following events:
+这是一个包含下列事件的 [EventEmitter][]：
 
 ### Event: 'request'
 
