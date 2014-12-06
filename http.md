@@ -59,10 +59,10 @@ list like the following:
 
 ## http.createServer([requestListener])
 
-Returns a new web server object.
+返回一个新建的 web 服务器对象。
 
-The `requestListener` is a function which is automatically
-added to the `'request'` event.
+`requestListener` 是一个函数，
+会被自动加入到 `'request'` 事件的监听队列。
 
 ## http.createClient([port], [host])
 
