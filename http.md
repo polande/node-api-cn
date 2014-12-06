@@ -66,9 +66,9 @@ list like the following:
 
 ## http.createClient([port], [host])
 
-This function is **deprecated**; please use [http.request()][] instead.
-Constructs a new HTTP client. `port` and `host` refer to the server to be
-connected to.
+该函数**已弃用**，请用 [http.request()][] 代替。
+创建一个新的 HTTP 客户端。
+`port` 和 `host` 指向所连接的服务器。
 
 ## Class: http.Server
 
