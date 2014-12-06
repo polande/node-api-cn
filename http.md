@@ -53,9 +53,9 @@ list like the following:
 
 * {Object}
 
-A collection of all the standard HTTP response status codes, and the
-short description of each.  For example, `http.STATUS_CODES[404] === 'Not
-Found'`.
+标准 HTTP 响应状态码的集合，
+以及每个状态码的简单描述。
+例如，`http.STATUS_CODES[404] === 'Not Found'`。
 
 ## http.createServer([requestListener])
 
