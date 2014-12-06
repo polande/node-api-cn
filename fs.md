@@ -62,9 +62,9 @@
 可以使用文件名的相对路径,
 但是这个路径是相对于 `process.cwd()` 的。
 
-Most fs functions let you omit the callback argument. If you do, a default
-callback is used that rethrows errors. To get a trace to the original call
-site, set the NODE_DEBUG environment variable:
+大部分文件系统函数可以省略回调函数这个参数。
+如果省略它，将会由默认的回调函数来重新抛出错误。
+要获得原始调用点的堆栈跟踪信息，需要在环境变量里设置 NODE_DEBUG：
 
     $ cat script.js
     function bad() {
