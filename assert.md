@@ -23,11 +23,11 @@
 
 ## assert.deepEqual(actual, expected, [message])
 
-Tests for deep equality.
+测试是否深度相等。
 
 ## assert.notDeepEqual(actual, expected, [message])
 
-Tests for any deep inequality.
+测试是否不深度相等。
 
 ## assert.strictEqual(actual, expected, [message])
 
