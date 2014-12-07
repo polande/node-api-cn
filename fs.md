@@ -96,12 +96,12 @@
 
 ## fs.ftruncate(fd, len, callback)
 
-Asynchronous ftruncate(2). No arguments other than a possible exception are
-given to the completion callback.
+异步的截断文件。
+回调函数只有一个参数：可能出现的异常信息。
 
 ## fs.ftruncateSync(fd, len)
 
-Synchronous ftruncate(2).
+同步的截断文件。
 
 ## fs.truncate(path, len, callback)
 
