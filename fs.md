@@ -114,30 +114,30 @@
 
 ## fs.chown(path, uid, gid, callback)
 
-Asynchronous chown(2). No arguments other than a possible exception are given
-to the completion callback.
+异步的修改文件的拥有者。
+回调函数只有一个参数：可能出现的异常信息。
 
 ## fs.chownSync(path, uid, gid)
 
-Synchronous chown(2).
+同步的修改文件的拥有者。
 
 ## fs.fchown(fd, uid, gid, callback)
 
-Asynchronous fchown(2). No arguments other than a possible exception are given
-to the completion callback.
+异步的修改文件的拥有者。
+回调函数只有一个参数：可能出现的异常信息。
 
 ## fs.fchownSync(fd, uid, gid)
 
-Synchronous fchown(2).
+同步的修改文件的拥有者。
 
 ## fs.lchown(path, uid, gid, callback)
 
-Asynchronous lchown(2). No arguments other than a possible exception are given
-to the completion callback.
+异步的修改文件的拥有者。
+回调函数只有一个参数：可能出现的异常信息。
 
 ## fs.lchownSync(path, uid, gid)
 
-Synchronous lchown(2).
+同步的修改文件的拥有者。
 
 ## fs.chmod(path, mode, callback)
 
