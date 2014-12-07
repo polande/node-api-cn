@@ -150,23 +150,23 @@
 
 ## fs.fchmod(fd, mode, callback)
 
-Asynchronous fchmod(2). No arguments other than a possible exception
-are given to the completion callback.
+异步的修改文件权限。
+回调函数只有一个参数：可能出现的异常信息。
 
 ## fs.fchmodSync(fd, mode)
 
-Synchronous fchmod(2).
+同步的修改文件权限。
 
 ## fs.lchmod(path, mode, callback)
 
-Asynchronous lchmod(2). No arguments other than a possible exception
-are given to the completion callback.
+异步的修改文件权限。
+回调函数只有一个参数：可能出现的异常信息。
 
-Only available on Mac OS X.
+仅适用于 Mac OS X 系统。
 
 ## fs.lchmodSync(path, mode)
 
-Synchronous lchmod(2).
+同步的修改文件权限。
 
 ## fs.stat(path, callback)
 
