@@ -176,16 +176,16 @@
 
 ## fs.lstat(path, callback)
 
-Asynchronous lstat(2). The callback gets two arguments `(err, stats)` where
-`stats` is a `fs.Stats` object. `lstat()` is identical to `stat()`, except that if
-`path` is a symbolic link, then the link itself is stat-ed, not the file that it
-refers to.
+异步的获取文件信息。
+回调函数有两个参数 `(err, stats)`，其中 `stats` 是一个 `fs.Stats` 对象。
+`lstat()` 类似于 `stat()`，
+区别在于，如果 `path` 是一个符号链接，则读取的是符号链接本身，而非它所链接到的文件。
 
 ## fs.fstat(fd, callback)
 
-Asynchronous fstat(2). The callback gets two arguments `(err, stats)` where
-`stats` is a `fs.Stats` object. `fstat()` is identical to `stat()`, except that
-the file to be stat-ed is specified by the file descriptor `fd`.
+异步的获取文件信息。
+回调函数有两个参数 `(err, stats)`，其中 `stats` 是一个 `fs.Stats` 对象。
+`fstat()` 类似于 `stat()`，区别在于，要读取的文件 `fd` 是一个文件描述符。
 
 ## fs.statSync(path)
 
@@ -193,11 +193,11 @@ the file to be stat-ed is specified by the file descriptor `fd`.
 
 ## fs.lstatSync(path)
 
-Synchronous lstat(2). Returns an instance of `fs.Stats`.
+同步的获取文件信息。返回一个 `fs.Stats` 实例。
 
 ## fs.fstatSync(fd)
 
-Synchronous fstat(2). Returns an instance of `fs.Stats`.
+同步的获取文件信息。返回一个 `fs.Stats` 实例。
 
 ## fs.link(srcpath, dstpath, callback)
 
