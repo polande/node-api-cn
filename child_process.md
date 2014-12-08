@@ -20,16 +20,16 @@ convenient.
 
 ## Class: ChildProcess
 
-`ChildProcess` is an [EventEmitter][].
+`ChildProcess` 是一个 [EventEmitter][]。
 
-Child processes always have three streams associated with them. `child.stdin`,
-`child.stdout`, and `child.stderr`.  These may be shared with the stdio
-streams of the parent process, or they may be separate stream objects
-which can be piped to and from.
+子进程有三个与之相关的流：
+`child.stdin`、`child.stdout` 和 `child.stderr`。
+它们可以共享父进程的标准输入输出流，
+也可以作为可导的独立流对象。
 
-The ChildProcess class is not intended to be used directly.  Use the
-`spawn()`, `exec()`, `execFile()`, or `fork()` methods to create a Child
-Process instance.
+ChildProcess 类不能被直接使用，
+使用 `spawn()`、`exec()`、`execFile()` 或 `fork()` 方法创建子进程实例。
+
 
 ### Event:  'error'
 
