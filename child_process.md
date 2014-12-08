@@ -35,18 +35,18 @@ ChildProcess 类不能被直接使用，
 
 * `err` {Error Object} the error.
 
-Emitted when:
+触发于：
 
-1. The process could not be spawned, or
-2. The process could not be killed, or
-3. Sending a message to the child process failed for whatever reason.
+1. 进程不能被创建
+2. 进程不能被终止
+3. 由任何原因引起的数据发送到子进程失败
 
-Note that the `exit`-event may or may not fire after an error has occurred. If
-you are listening on both events to fire a function, remember to guard against
-calling your function twice.
+注意，`exit` 事件在错误发生后可能会也可能不会触发。
+如果同时监听了两个事件去触发某个函数，
+需要防备会触发两次。
 
-See also [`ChildProcess#kill()`](#child_process_child_kill_signal) and
-[`ChildProcess#send()`](#child_process_child_send_message_sendhandle).
+参阅 [`ChildProcess#kill()`](#child_process_child_kill_signal) 和
+[`ChildProcess#send()`](#child_process_child_send_message_sendhandle)。
 
 ### Event:  'exit'
 
