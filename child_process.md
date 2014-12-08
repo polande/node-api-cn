@@ -122,9 +122,9 @@ not be set.
 
 * {Integer}
 
-The PID of the child process.
+子进程的 PID。
 
-Example:
+例子：
 
     var spawn = require('child_process').spawn,
         grep  = spawn('grep', ['ssh']);
