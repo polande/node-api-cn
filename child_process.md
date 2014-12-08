@@ -2,17 +2,17 @@
 
     Stability: 3 - Stable
 
-Node provides a tri-directional `popen(3)` facility through the
-`child_process` module.
+Node 通过 `child_process` 模块提供了处理三向数据流的 `popen(3)` 功能。
 
-It is possible to stream data through a child's `stdin`, `stdout`, and
-`stderr` in a fully non-blocking way.  (Note that some programs use
-line-buffered I/O internally.  That doesn't affect node.js but it means
-data you send to the child process may not be immediately consumed.)
 
-To create a child process use `require('child_process').spawn()` or
-`require('child_process').fork()`.  The semantics of each are slightly
-different, and explained [below](#child_process_asynchronous_process_creation).
+它能以完全非阻塞的方式与子进程的 `stdin`、`stdout` 和 `stderr` 用流的方式传递数据。
+注意，某些程序在内部使用行缓冲 I/O，
+虽然这不会影响到 node.js，
+但传递给子进程的数据不会被立即处理。
+
+使用 `require('child_process').spawn()` 或 `require('child_process').fork()` 创建子进程。
+这两种方法的语义有些区别，
+[下面](#child_process_asynchronous_process_creation)会有解释。
 
 For scripting purposes you may find the
 [synchronous counterparts](#child_process_synchronous_process_creation) more
