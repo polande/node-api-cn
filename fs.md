@@ -379,24 +379,24 @@ Synchronous fsync(2).
 
 ## fs.write(fd, buffer, offset, length[, position], callback)
 
-Write `buffer` to the file specified by `fd`.
+向指定文件 `fd` 写入 `buffer`。
 
-`offset` and `length` determine the part of the buffer to be written.
+`offset` 和 `length` 指定从哪个位置写入 buffer。
 
-`position` refers to the offset from the beginning of the file where this data
-should be written. If `typeof position !== 'number'`, the data will be written
-at the current position. See pwrite(2).
+`position` 表示写入数据的位置与文件开头的偏移量。
+如果 `typeof position !== 'number'`，则数据会从当前位置写入。
+参阅 pwrite(2)。
 
-The callback will be given three arguments `(err, written, buffer)` where
-`written` specifies how many _bytes_ were written from `buffer`.
+回调有三个参数 `(err, written, buffer)`，
+其中 `written` 表示从 `buffer` 写入的字节数。
 
-Note that it is unsafe to use `fs.write` multiple times on the same file
-without waiting for the callback. For this scenario,
-`fs.createWriteStream` is strongly recommended.
+注意，使用 `fs.write` 多次操作同一个文件且没有等待回调是不安全的。
+在这种情况下，
+强烈推荐使用 `fs.createWriteStream`。
 
-On Linux, positional writes don't work when the file is opened in append mode.
-The kernel ignores the position argument and always appends the data to
-the end of the file.
+在 Linux 上，无法对以追加模式打开的文件进行指定位置的写入操作。
+内核会忽略位置参数并且总是将数据写入到文件尾部。
+
 
 ## fs.write(fd, data[, position[, encoding]], callback)
 
