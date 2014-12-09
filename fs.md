@@ -730,9 +730,9 @@ on Unix systems, it never was.
 
 ## fs.createReadStream(path, [options])
 
-Returns a new ReadStream object (See `Readable Stream`).
+返回一个新建的 ReadStream 对象（详见 `Readable Stream`）。
 
-`options` is an object with the following defaults:
+`options` 是一个包含以下缺省值的对象：
 
     { flags: 'r',
       encoding: null,
@@ -741,17 +741,17 @@ Returns a new ReadStream object (See `Readable Stream`).
       autoClose: true
     }
 
-`options` can include `start` and `end` values to read a range of bytes from
-the file instead of the entire file.  Both `start` and `end` are inclusive and
-start at 0. The `encoding` can be `'utf8'`, `'ascii'`, or `'base64'`.
+`options` 可以提供 `start` 和 `end` 值用于读取文件特定范围的字节而非整个文件。
+`start` 和 `end` 都是包含在范围内的，且从 0 开始。
+`encoding` 可以是 `'utf8'`、`'ascii'` 或 `'base64'`。
 
-If `autoClose` is false, then the file descriptor won't be closed, even if
-there's an error.  It is your responsibility to close it and make sure
-there's no file descriptor leak.  If `autoClose` is set to true (default
-behavior), on `error` or `end` the file descriptor will be closed
-automatically.
+如果 `autoClose` 为 false，
+则即使发生错误，也不会关闭文件描述符。
+此时你需要负责关闭文件，且确保文件描述符不会泄露。
+如果 `autoClose` 为 true（默认值），
+则当触发 `error` 或 `end` 事件时，文件描述符会被自动关闭。
 
-An example to read the last 10 bytes of a file which is 100 bytes long:
+例子，从长度为 100 个字节的文件中读取最后 10 个字节：
 
     fs.createReadStream('sample.txt', {start: 90, end: 99});
 
