@@ -641,24 +641,24 @@ callback, and have some fallback logic if it is null.
 
 ## fs.exists(path, callback)
 
-Test whether or not the given path exists by checking with the file system.
-Then call the `callback` argument with either true or false.  Example:
+异步的检查指定路径的文件是否存在。
+并为 `callback` 传入 true 或 false 作为参数。例子：
 
     fs.exists('/etc/passwd', function (exists) {
       util.debug(exists ? "it's there" : "no passwd!");
     });
 
-`fs.exists()` is an anachronism and exists only for historical reasons.
-There should almost never be a reason to use it in your own code.
+`fs.exists()` 是一个不建议使用的方法，且因历史原因而遗留。
+建议不要再在代码中使用。
 
-In particular, checking if a file exists before opening it is an anti-pattern
-that leaves you vulnerable to race conditions: another process may remove the
-file between the calls to `fs.exists()` and `fs.open()`.  Just open the file
-and handle the error when it's not there.
+尤其是在打开文件前检查其是否存在，这是一个反面模式，
+会使程序在竞态条件中变得很脆弱：
+比如另一个进程可能在你调用 `fs.exists()` 和 `fs.open()` 的间隙移除了文件。
+建议直接打开文件，当文件不存在造成错误时再捕获异常。
 
 ## fs.existsSync(path)
 
-Synchronous version of `fs.exists`.
+同步的检查文件是否存在。
 
 ## Class: fs.Stats
 
