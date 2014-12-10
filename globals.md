@@ -2,8 +2,8 @@
 
 <!-- type=misc -->
 
-These objects are available in all modules. Some of these objects aren't
-actually in the global scope but in the module scope - this will be noted.
+这些对象在所有模块中均可使用。
+有些对象实际上并非在全局作用域内，而是在模块作用域内。
 
 ## global
 
