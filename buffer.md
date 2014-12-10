@@ -2,10 +2,10 @@
 
     Stability: 3 - Stable
 
-Pure JavaScript is Unicode friendly but not nice to binary data.  When
-dealing with TCP streams or the file system, it's necessary to handle octet
-streams. Node has several strategies for manipulating, creating, and
-consuming octet streams.
+纯 JavaScript 对 Unicode 友好但是无法很好地处理二进制数据。
+当面对 TCP 流或文件系统时，需要处理八位流。
+Node 有以下几种操作、创建以及使用八位流的策略。
+
 
 Raw data is stored in instances of the `Buffer` class. A `Buffer` is similar
 to an array of integers but corresponds to a raw memory allocation outside
