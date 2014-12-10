@@ -11,10 +11,10 @@
 
 * {Object} The global namespace object.
 
-In browsers, the top-level scope is the global scope. That means that in
-browsers if you're in the global scope `var something` will define a global
-variable. In Node this is different. The top-level scope is not the global
-scope; `var something` inside a Node module will be local to that module.
+在浏览器中，顶级作用域就是全局作用域。
+也就是说在浏览器中，如果在全局作用域内 `var something` 将会声明一个全局变量。
+在 Node 中则不同。
+顶级作用域并非全局作用域，在 Node 模块里的 `var something` 只属于当前模块。
 
 ## process
 
