@@ -22,7 +22,7 @@
 
 * {Object}
 
-The process object. See the [process object][] section.
+进程对象。参阅 [process object][] 章节。
 
 ## console
 
