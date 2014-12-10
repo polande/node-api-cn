@@ -22,7 +22,7 @@
 
 * {Object}
 
-进程对象。参阅 [process 对象][] 章节。
+进程对象。参阅 [process 对象](process.html#process_process) 章节。
 
 ## console
 
@@ -38,7 +38,7 @@ Used to print to stdout and stderr. See the [console][] section.
 
 * {Function}
 
-用于处理二进制数据。参阅 [buffer 章节][]。
+用于处理二进制数据。参阅 [buffer 章节](buffer.html)。
 
 ## require()
 
@@ -46,7 +46,7 @@ Used to print to stdout and stderr. See the [console][] section.
 
 * {Function}
 
-用于引入模块。参阅 [Modules][] 章节。
+用于引入模块。参阅 [Modules](modules.html) 章节。
 `require` 实际上并非全局的，而是各个模块本地的。
 
 ### require.resolve()
@@ -135,15 +135,15 @@ See the [module system documentation][] for more information.
 
 <!-- type=var -->
 
-A reference to the `module.exports` that is shorter to type.
-See [module system documentation][] for details on when to use `exports` and
-when to use `module.exports`.
+`module.exports` 的引用。
+何时使用 `exports` 与 `module.exports`，
+详见 [module 系统文档](modules.html)。
 
-`exports` isn't actually a global but rather local to each module.
+`exports` 实际上并非全局的，而是各个模块本地的。
 
-See the [module system documentation][] for more information.
+详见 [module 系统文档](modules.html)。
 
-See the [module section][] for more information.
+详见 [module 章节](modules.html)。
 
 ## setTimeout(cb, ms)
 
@@ -182,10 +182,10 @@ will not execute.
 
 The timer functions are global variables. See the [timers][] section.
 
-[buffer 章节]: buffer.html
+[buffer section]: buffer.html
 [module section]: modules.html
 [module system documentation]: modules.html
 [Modules]: modules.html#modules_modules
-[process 对象]: process.html#process_process
+[process object]: process.html#process_process
 [console]: console.html
 [timers]: timers.html
