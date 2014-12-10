@@ -22,7 +22,7 @@
 
 * {Object}
 
-进程对象。参阅 [process object][] 章节。
+进程对象。参阅 [process 对象][] 章节。
 
 ## console
 
@@ -38,7 +38,7 @@ Used to print to stdout and stderr. See the [console][] section.
 
 * {Function}
 
-Used to handle binary data. See the [buffer section][]
+用于处理二进制数据。参阅 [buffer 章节][]。
 
 ## require()
 
@@ -182,10 +182,10 @@ will not execute.
 
 The timer functions are global variables. See the [timers][] section.
 
-[buffer section]: buffer.html
+[buffer 章节]: buffer.html
 [module section]: modules.html
 [module system documentation]: modules.html
 [Modules]: modules.html#modules_modules
-[process object]: process.html#process_process
+[process 对象]: process.html#process_process
 [console]: console.html
 [timers]: timers.html
