@@ -46,8 +46,8 @@ Used to handle binary data. See the [buffer section][]
 
 * {Function}
 
-To require modules. See the [Modules][] section.  `require` isn't actually a
-global but rather local to each module.
+用于引入模块。参阅 [Modules][] 章节。
+`require` 实际上并非全局的，而是各个模块本地的。
 
 ### require.resolve()
 
