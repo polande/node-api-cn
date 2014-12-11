@@ -298,64 +298,64 @@ Synchronous close(2).
 
 ## fs.open(path, flags, [mode], callback)
 
-Asynchronous file open. See open(2). `flags` can be:
+异步的打开文件。详见 open(2)。`flags` 可以是：
 
-* `'r'` - Open file for reading.
-An exception occurs if the file does not exist.
+* `'r'` - 以只读的方式打开文件。
+如果文件不存在则发生异常。
 
-* `'r+'` - Open file for reading and writing.
-An exception occurs if the file does not exist.
+* `'r+'` - 以读写的方式打开文件。
+如果文件不存在则发生异常。
 
-* `'rs'` - Open file for reading in synchronous mode. Instructs the operating
-  system to bypass the local file system cache.
+* `'rs'` - 同步模式下，以只读的方式打开文件。
+  指令绕过操作系统的本地文件系统缓存。
 
-  This is primarily useful for opening files on NFS mounts as it allows you to
-  skip the potentially stale local cache. It has a very real impact on I/O
-  performance so don't use this flag unless you need it.
+  这主要用于打开 NFS 挂载的文件，因为可以跳过过时的本地缓存。
+  但这非常影响 I/O 操作的性能，
+  因此除非确实需要，否则不要使用该标志。
 
-  Note that this doesn't turn `fs.open()` into a synchronous blocking call.
-  If that's what you want then you should be using `fs.openSync()`
+  注意，这并不意味着 `fs.open()` 变成一个同步阻塞的请求。
+  如果需要同步阻塞的请求，应该使用 `fs.openSync()`。
 
-* `'rs+'` - Open file for reading and writing, telling the OS to open it
-  synchronously. See notes for `'rs'` about using this with caution.
+* `'rs+'` - 同步模式下，以读写的方式打开文件。
+  请小心使用该方式，详见 `'rs'` 的注释。
 
-* `'w'` - Open file for writing.
-The file is created (if it does not exist) or truncated (if it exists).
+* `'w'` - 以只写的方式打开文件。
+如果文件不存在，则新建文件，否则覆盖文件。
 
-* `'wx'` - Like `'w'` but fails if `path` exists.
+* `'wx'` - 类似 `'w'`，但如果文件存在则操作会失败。
 
-* `'w+'` - Open file for reading and writing.
-The file is created (if it does not exist) or truncated (if it exists).
+* `'w+'` -  以读写的方式打开文件。
+如果文件不存在，则新建文件，否则覆盖文件。
 
-* `'wx+'` - Like `'w+'` but fails if `path` exists.
+* `'wx+'` - 类似 `'w+'`，但如果文件存在则操作会失败。
 
-* `'a'` - Open file for appending.
-The file is created if it does not exist.
+* `'a'` - 以追加的方式打开文件。
+如果文件不存在，则新建文件。
 
-* `'ax'` - Like `'a'` but fails if `path` exists.
+* `'ax'` - 类似 `'a'`，但如果文件存在则操作会失败。
 
-* `'a+'` - Open file for reading and appending.
-The file is created if it does not exist.
+* `'a+'` - 以读取和追加的方式打开文件。
+如果文件不存在，则新建文件。
 
-* `'ax+'` - Like `'a+'` but fails if `path` exists.
+* `'ax+'` - 类似 `'a+'`，但如果文件存在则操作会失败。
 
-`mode` sets the file mode (permission and sticky bits), but only if the file was
-created. It defaults to `0666`, readable and writeable.
+`mode` 用于设置文件模式，不过前提是文件已存在。
+默认值是 `0666`，可读且可写。
 
-The callback gets two arguments `(err, fd)`.
+回调函数有两个参数 `(err, fd)`。
 
-The exclusive flag `'x'` (`O_EXCL` flag in open(2)) ensures that `path` is newly
-created. On POSIX systems, `path` is considered to exist even if it is a symlink
-to a non-existent file. The exclusive flag may or may not work with network file
-systems.
+排除标识 `'x'`（open(2) 的 `O_EXCL` 标识）确保 `path` 是一个新建的文件。
+在 POSIX 操作系统上，即使 `path` 是一个指向不存在位置的符号链接，也会被认定为文件存在。
+排除标识在网络文件系统上不能确定是否有效。
 
-On Linux, positional writes don't work when the file is opened in append mode.
-The kernel ignores the position argument and always appends the data to
-the end of the file.
+
+在 Linux 上，无法对以追加方式打开的文件进行指定位置的写入操作。
+内核会忽略位置参数并且总是将数据追加到文件尾部。
+
 
 ## fs.openSync(path, flags, [mode])
 
-Synchronous version of `fs.open()`.
+同步的 `fs.open()`。
 
 ## fs.utimes(path, atime, mtime, callback)
 ## fs.utimesSync(path, atime, mtime)
