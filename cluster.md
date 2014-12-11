@@ -2,9 +2,9 @@
 
     Stability: 2 - Unstable
 
-A single instance of Node runs in a single thread. To take advantage of
-multi-core systems the user will sometimes want to launch a cluster of Node
-processes to handle the load.
+单个 Node 实例运行在单个线程中。
+要发挥多核系统的能力，有时需要启动一个 Node 进程的集群来处理负载。
+
 
 The cluster module allows you to easily create child processes that
 all share server ports.
