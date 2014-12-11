@@ -434,22 +434,22 @@ Synchronous versions of `fs.write()`. Returns the number of bytes written.
 
 ## fs.read(fd, buffer, offset, length, position, callback)
 
-Read data from the file specified by `fd`.
+从指定的文件 `fd` 读取数据。
 
-`buffer` is the buffer that the data will be written to.
+`buffer` 是缓冲区，数据将会写入这里。
 
-`offset` is the offset in the buffer to start writing at.
+`offset` 是 buffer 中开始写入位置的偏移量。
 
-`length` is an integer specifying the number of bytes to read.
+`length` 是一个整数值，指定读取的字节数。
 
-`position` is an integer specifying where to begin reading from in the file.
-If `position` is `null`, data will be read from the current file position.
+`position` 是一个整数值，指定从文件哪个位置开始读取。
+如果 `position` 是 `null`，则从文件当前的位置读取数据。
 
-The callback is given the three arguments, `(err, bytesRead, buffer)`.
+回调函数有三个参数 `(err, bytesRead, buffer)`。
 
 ## fs.readSync(fd, buffer, offset, length, position)
 
-Synchronous version of `fs.read`. Returns the number of `bytesRead`.
+同步的 `fs.read`。返回 `bytesRead` 的个数。
 
 ## fs.readFile(filename, [options], callback)
 
