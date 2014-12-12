@@ -539,9 +539,9 @@ There are a few special headers that should be noted.
 
 ## http.get(options, [callback])
 
-Since most requests are GET requests without bodies, Node provides this
-convenience method. The only difference between this method and `http.request()`
-is that it sets the method to GET and calls `req.end()` automatically.
+因为大部分请求是没有报文体的 GET 请求，所以 Node 提供了这个便捷的方法。
+该方法与 `http.request()` 的唯一区别是它设置的是 GET 方法并自动调用 `req.end()`。
+
 
 Example:
 
