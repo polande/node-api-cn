@@ -6,8 +6,8 @@
 
 <!--type=global-->
 
-For printing to stdout and stderr.  Similar to the console object functions
-provided by most web browsers, here the output is sent to stdout or stderr.
+用于向 stdout 和 stderr 打印字符。
+类似于大部分 Web 浏览器提供的 console 对象函数，在这里则是输出到 stdout 或 stderr。
 
 The console functions are synchronous when the destination is a terminal or
 a file (to avoid lost messages in case of premature exit) and asynchronous
